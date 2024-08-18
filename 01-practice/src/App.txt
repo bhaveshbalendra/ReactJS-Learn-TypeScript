@@ -1,0 +1,82 @@
+function App() {
+  // type Identity = <T>(arg: T) => T;
+  // type Greet = (name: string, age?: number) => string;
+  // type Obj = {
+  //   age: number;
+  //   (x: number, y: number) : number;
+  //   add(x: number, y: number): number;
+  //   person:(x: number, y: number) => number;
+  //   add(x: number, y: number): number;
+  // };
+  // type Obj = {
+  //   age: number;
+  //   person:(x: number, y: number) => number;
+  // };
+
+  // interface Adder {
+  //   (x: number, y: number): number;
+  // }
+  // const add: Adder = (x, y) => x + y;
+
+  // function logAndReturn<Type>(value: Type): Type {
+  //   return value;
+  // }
+
+  // function logAnd<T>(value: T): string {
+  //   return "Hello";
+  // }
+  // const FunAdd = function <T>(value: T): number {
+  //   return 123;
+  // };
+
+  // const identity: Identity = function (arg) {
+  //   return arg;
+  // };
+
+  // const greet: Greet = function (name, age) {
+  //   return "hello";
+  // };
+
+  // interface Adder {
+  //   name:string;
+  //   age:number;
+  //   (x: number, y: number) => number;
+  // }
+
+  // const add: Adder = (x, y) => x + y;
+
+  // type Adder = (x: number, y: number) => number;
+
+  // const add: Adder = (x, y) => x + y;
+  // interface Obj {
+  //   age: number;
+  //   add: (x: number, y: number) => number;
+  // }
+  // const obj: Obj = {
+  //   age: 10,
+  //   add: (x, y) => x + y,
+  // };
+
+  // interface Obj {
+  //   (x: number, y: number): number;
+  // }
+  // type Obj2 = (x: number, y: number) => number;
+
+  // const name:Obj =(x,y) => {
+  //   return 1;
+  // }
+
+  const identity = <T extends {}>(arg: T): T => {
+    return arg;
+  };
+
+  let result1 = identity<number>(42);
+
+  return (
+    <div>
+      <p>hello</p>
+    </div>
+  );
+}
+
+export default App;
